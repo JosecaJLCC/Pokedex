@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="./src/styles/style_index.css">
 </head>
 <body>
     <div id="principal">
         <nav id="navegador">
-            <a id="pokemon" href=""><img id="logo-title" src="poke.webp" alt=""></a>
+            <a id="pokemon" href=""><img id="logo-title" src="./src/assets/images/poke.webp" alt=""></a>
             <section id="buscador">
                 <input type="text" id="lectura">
-                <img id="logo-search" src="search.png" alt="">
+                <img id="logo-search" src="./src/assets/icons/search.png" alt="">
             </section>
         </nav>
         <main id="contenido">
             
         </main>
         <section id="modal">
-            <h2 id="titulo-nombre">TITULO</h2>
-            <img id="img-pokemon" src="agumon.jpeg" alt="">
-            <h3 id="tipo-pokemon">DESCRIPCION</h3>
-            <button id="button-close">CERRAR</button>
+            <span id="button-close">X</span>
+            <article id="principal-modal">
+                <h2 id="titulo-nombre"></h2>
+                <div id="contenido-modal">
+                    <img id="img-pokemon" src="" alt="">
+                    <div id="info-pokemon">
+                        <h3 id="tipo-pokemon">Tipo:</h3>            
+                        <h3 id="habilidad-pokemon">Habilidades: </h3>
+                        <h3 id="debilidad-pokemon">Debilidades:</h3>
+                        <h3 id="peso-pokemon">Peso:</h3>
+                        <h3 id="altura-pokemon">Altura:</h3>
+                        
+                    </div>
+                    
+                </div>
+            </article>
+            
         </section>
     </div>
     <script type="module" defer src="script_index.js"></script>
