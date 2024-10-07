@@ -15,24 +15,26 @@ let habilidadPokemon = document.getElementById("habilidad-pokemon");
 let debilidadPokemon = document.getElementById("debilidad-pokemon");
 let buttonClose = document.getElementById("button-close");
 
+
+
 function principal(){
-    fetch('https://storage.googleapis.com/campus-cvs/00000000000-images-lectures/pokemons.json')
-    .then(response => response.json())
-    .then(data =>{
-        let postCard="";
-        data.forEach( datito =>{
-            const pokemon = new Pokemon(datito.name.toUpperCase(), datito.abilities , datito.weight, datito.weakness, datito.height, datito.ThumbnailImage, datito.type);
-            /* Para evitar la duplicacion de pokemons */
-            const pokes=buscarObjPokemon(pokemon)
-            if(pokes==undefined){
-                createNewPokemon(pokemon);
-                postCard+=pokemon.createHTML();
-            }
-        })
-        contenedor.innerHTML=postCard;  
-        const dato=mostrarPokemons();
-        createModal(dato);
-    })
+    fetch('https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/campus-cvs/00000000000-images-lectures/pokemons.json')
+  .then(response => response.json())
+  .then(data => {
+      let postCard = "";
+      data.forEach(datito => {
+          const pokemon = new Pokemon(datito.name.toUpperCase(), datito.abilities, datito.weight, datito.weakness, datito.height, datito.ThumbnailImage, datito.type);
+          const pokes = buscarObjPokemon(pokemon);
+          if (pokes == undefined) {
+              createNewPokemon(pokemon);
+              postCard += pokemon.createHTML();
+          }
+      });
+      contenedor.innerHTML = postCard;
+      const dato = mostrarPokemons();
+      createModal(dato);
+  });
+
 }
 principal();
 
