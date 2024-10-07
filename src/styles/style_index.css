@@ -99,7 +99,7 @@ li{
     /* width: 700px; */
     /* height: 450px; */
     top: 110px;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     padding: 10px;
 }
 
@@ -107,14 +107,14 @@ li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     flex-wrap: wrap;
 }
 
 #contenido-modal{
     display: flex;
     flex-direction: row;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     width: 100%;
     
 }
@@ -135,7 +135,7 @@ li{
 
 #info-pokemon{
     padding: 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     /* align-items: center; */
